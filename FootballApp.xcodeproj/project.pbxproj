@@ -18,6 +18,15 @@
 		D0ACD58727C2D46900724195 /* FootballAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */; };
 		D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59727C2D66200724195 /* FeedViewController.swift */; };
 		D0ACD59A27C2D66200724195 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ACD59827C2D66200724195 /* FeedViewController.xib */; };
+		D0ACD59D27C2D82600724195 /* ApiRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59C27C2D82600724195 /* ApiRestClient.swift */; };
+		D0ACD5A027C2D8AA00724195 /* ApiParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59F27C2D8AA00724195 /* ApiParameters.swift */; };
+		D0ACD5A127C2D8AA00724195 /* ApiParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59F27C2D8AA00724195 /* ApiParameters.swift */; };
+		D0ACD5A527C2E27D00724195 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5A427C2E27D00724195 /* FeedRepository.swift */; };
+		D0ACD5A627C2E27D00724195 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5A427C2E27D00724195 /* FeedRepository.swift */; };
+		D0ACD5A827C2E30E00724195 /* FeedRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5A727C2E30E00724195 /* FeedRequests.swift */; };
+		D0ACD5A927C2E30E00724195 /* FeedRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5A727C2E30E00724195 /* FeedRequests.swift */; };
+		D0ACD5B227C2E5C300724195 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5B127C2E5C300724195 /* Feed.swift */; };
+		D0ACD5B327C2E5C300724195 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5B127C2E5C300724195 /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,11 @@
 		D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D0ACD59727C2D66200724195 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D0ACD59827C2D66200724195 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		D0ACD59C27C2D82600724195 /* ApiRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestClient.swift; sourceTree = "<group>"; };
+		D0ACD59F27C2D8AA00724195 /* ApiParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParameters.swift; sourceTree = "<group>"; };
+		D0ACD5A427C2E27D00724195 /* FeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
+		D0ACD5A727C2E30E00724195 /* FeedRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRequests.swift; sourceTree = "<group>"; };
+		D0ACD5B127C2E5C300724195 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,9 @@
 		D0ACD56227C2D46800724195 /* FootballApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0ACD59B27C2D7FE00724195 /* Network */,
+				D0ACD5AA27C2E53500724195 /* Models */,
+				D0ACD5A227C2E0E600724195 /* Repositories */,
 				D0ACD59427C2D5FE00724195 /* Features */,
 				D0ACD59327C2D5ED00724195 /* Resources */,
 				D0ACD56327C2D46800724195 /* AppDelegate.swift */,
@@ -163,6 +180,40 @@
 				D0ACD59827C2D66200724195 /* FeedViewController.xib */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		D0ACD59B27C2D7FE00724195 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD59C27C2D82600724195 /* ApiRestClient.swift */,
+				D0ACD59F27C2D8AA00724195 /* ApiParameters.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D0ACD5A227C2E0E600724195 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD5A327C2E10300724195 /* Feed */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D0ACD5A327C2E10300724195 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD5A427C2E27D00724195 /* FeedRepository.swift */,
+				D0ACD5A727C2E30E00724195 /* FeedRequests.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D0ACD5AA27C2E53500724195 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD5B127C2E5C300724195 /* Feed.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +349,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ACD56827C2D46800724195 /* ViewController.swift in Sources */,
+				D0ACD5B227C2E5C300724195 /* Feed.swift in Sources */,
+				D0ACD59D27C2D82600724195 /* ApiRestClient.swift in Sources */,
 				D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */,
 				D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */,
+				D0ACD5A027C2D8AA00724195 /* ApiParameters.swift in Sources */,
+				D0ACD5A827C2E30E00724195 /* FeedRequests.swift in Sources */,
+				D0ACD5A527C2E27D00724195 /* FeedRepository.swift in Sources */,
 				D0ACD56627C2D46800724195 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ACD5A627C2E27D00724195 /* FeedRepository.swift in Sources */,
+				D0ACD5B327C2E5C300724195 /* Feed.swift in Sources */,
+				D0ACD5A927C2E30E00724195 /* FeedRequests.swift in Sources */,
 				D0ACD57B27C2D46900724195 /* FootballAppTests.swift in Sources */,
+				D0ACD5A127C2D8AA00724195 /* ApiParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FootballApp/Info.plist;
+				INFOPLIST_FILE = FootballApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -509,7 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FootballApp/Info.plist;
+				INFOPLIST_FILE = FootballApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
