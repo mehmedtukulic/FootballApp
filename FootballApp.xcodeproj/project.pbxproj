@@ -16,6 +16,8 @@
 		D0ACD57B27C2D46900724195 /* FootballAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD57A27C2D46900724195 /* FootballAppTests.swift */; };
 		D0ACD58527C2D46900724195 /* FootballAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD58427C2D46900724195 /* FootballAppUITests.swift */; };
 		D0ACD58727C2D46900724195 /* FootballAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */; };
+		D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59727C2D66200724195 /* FeedViewController.swift */; };
+		D0ACD59A27C2D66200724195 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0ACD59827C2D66200724195 /* FeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D0ACD58027C2D46900724195 /* FootballAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACD58427C2D46900724195 /* FootballAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppUITests.swift; sourceTree = "<group>"; };
 		D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0ACD59727C2D66200724195 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		D0ACD59827C2D66200724195 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,10 @@
 		D0ACD56227C2D46800724195 /* FootballApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0ACD59427C2D5FE00724195 /* Features */,
+				D0ACD59327C2D5ED00724195 /* Resources */,
 				D0ACD56327C2D46800724195 /* AppDelegate.swift */,
 				D0ACD56527C2D46800724195 /* SceneDelegate.swift */,
-				D0ACD56727C2D46800724195 /* ViewController.swift */,
-				D0ACD56927C2D46800724195 /* Main.storyboard */,
-				D0ACD56C27C2D46900724195 /* Assets.xcassets */,
-				D0ACD56E27C2D46900724195 /* LaunchScreen.storyboard */,
-				D0ACD57127C2D46900724195 /* Info.plist */,
 			);
 			path = FootballApp;
 			sourceTree = "<group>";
@@ -125,6 +126,43 @@
 				D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */,
 			);
 			path = FootballAppUITests;
+			sourceTree = "<group>";
+		};
+		D0ACD59327C2D5ED00724195 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD56C27C2D46900724195 /* Assets.xcassets */,
+				D0ACD57127C2D46900724195 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0ACD59427C2D5FE00724195 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD59527C2D60C00724195 /* Initial */,
+				D0ACD59627C2D64500724195 /* Feed */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D0ACD59527C2D60C00724195 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD56E27C2D46900724195 /* LaunchScreen.storyboard */,
+				D0ACD56927C2D46800724195 /* Main.storyboard */,
+				D0ACD56727C2D46800724195 /* ViewController.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		D0ACD59627C2D64500724195 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D0ACD59727C2D66200724195 /* FeedViewController.swift */,
+				D0ACD59827C2D66200724195 /* FeedViewController.xib */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +271,7 @@
 			files = (
 				D0ACD57027C2D46900724195 /* LaunchScreen.storyboard in Resources */,
 				D0ACD56D27C2D46900724195 /* Assets.xcassets in Resources */,
+				D0ACD59A27C2D66200724195 /* FeedViewController.xib in Resources */,
 				D0ACD56B27C2D46800724195 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +299,7 @@
 			files = (
 				D0ACD56827C2D46800724195 /* ViewController.swift in Sources */,
 				D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */,
+				D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */,
 				D0ACD56627C2D46800724195 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,13 +407,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -422,12 +463,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
