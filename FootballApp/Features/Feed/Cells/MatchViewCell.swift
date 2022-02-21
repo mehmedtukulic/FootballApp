@@ -85,11 +85,11 @@ class MatchViewCell: UITableViewCell {
         dateLabel.text = match.formattedDate.toString()
         
         switch match.status {
-        case .completed:
+        case .previous:
             periodLabel.text = match.period
-        case .playing:
+        case .live:
             periodLabel.text = "\(match.minute)"
-        case .willBePlayed:
+        case .next:
             periodLabel.text = String()
         }
         
@@ -103,7 +103,7 @@ class MatchViewCell: UITableViewCell {
     
     @IBAction func notificationButtonTapped(_ sender: Any) {
         notificationSelected = !notificationSelected
-        let buttonImage = notificationSelected ? UIImage(named: "ringOn") : UIImage(named: "ringOff")
+        let buttonImage = notificationSelected ? Images.notificationOnIcon : Images.notificationOffIcon
         notificationButton.setImage(buttonImage, for: .normal)
     }
 }

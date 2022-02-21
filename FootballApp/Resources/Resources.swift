@@ -10,6 +10,7 @@ import UIKit
 
 typealias Colors = Resources.Colors
 typealias Fonts = Resources.Fonts
+typealias Images = Resources.Images
 
 struct Resources {
     
@@ -46,5 +47,11 @@ struct Resources {
             }
             return font
         }
+    }
+    
+    struct Images {
+        static let notificationOnIcon: UIImage = UIImage(named: "ringOn") ?? UIImage()
+        static let notificationOffIcon: UIImage = UIImage(named: "ringOff") ?? UIImage()
+        static let backIcon: UIImage = UIImage(named: "backIcon") ?? UIImage()
     }
 }

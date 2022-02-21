@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FeedRequest: FootballRequest {
+enum FeedRequest: APIRequest {
     case getFeed
     
     var url: String {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FootballRequest {
+protocol APIRequest {
     var url: String { get }
     var headers: JSON{ get }
     var parameters: JSON? { get }

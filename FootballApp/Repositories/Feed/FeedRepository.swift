@@ -12,15 +12,15 @@ protocol FeedRepositoryProtocol {
 }
 
 class FeedRepository: FeedRepositoryProtocol {
-    private var apiClient: FootballAPIProtocol
+    private var apiClient: APIProtocol
     
-    init(apiClient: FootballAPIProtocol = APIClient()) {
+    init(apiClient: APIProtocol = APIClient()) {
         self.apiClient = apiClient
     }
     
     func getFeed(success: @escaping (FeedResponse) -> Void, failure: @escaping (String) -> Void) {
         let request = FeedRequest.getFeed
-        apiClient.submitRequest(footballRequest: request) { (response: FeedResponse) in
+        apiClient.makeRequest(request) { (response: FeedResponse) in
             success(response)
         } failure: { error in
             failure(error)

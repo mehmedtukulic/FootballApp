@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct FeedResponse: Decodable {
+struct FeedResponse: Codable {
     let status: String
     let data: [Match]
+    
+    enum CodingKeys: String, CodingKey {
+        case status
+        case data
+    }
 }
 
-struct Match: Decodable {
+struct Match: Codable {
     let id: String
     let feedMatchId: Int
     let competition: String
@@ -22,6 +27,18 @@ struct Match: Decodable {
     let homeTeam: Team
     let awayTeam: Team
     let venue: Venue
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case feedMatchId
+        case competition
+        case period
+        case minute
+        case date
+        case homeTeam
+        case awayTeam
+        case venue
+    }
     
     var formattedDate: Date {
         let formatter = DateFormatter.iso8601Formater
@@ -43,41 +60,61 @@ struct Match: Decodable {
             // Started playing or completed
             if currentDate > formattedDate {
                 if differenceInHours <= 2 {
-                    return .playing
+                    return .live
                 } else {
-                    return .completed
+                    return .previous
                 }
             } else {
                 // Not started yed
-                return .willBePlayed
+                return .next
             }
         }
         
         //Will be played
         if currentDate < formattedDate {
-            return .willBePlayed
+            return .next
         }
         
         //Completed
-        return .completed
+        return .previous
     }
     
 }
 
-struct Team: Decodable {
+struct Team: Codable {
     let id: String
     let name: String
     let score: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case score
+    }
 }
 
-struct Venue: Decodable {
+struct Venue: Codable {
     let id: Int
     let name: String
     let location: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case location
+    }
 }
 
 enum MatchStatus {
-    case completed
-    case playing
-    case willBePlayed
+    case previous
+    case live
+    case next
+}
+
+
+extension Match: Equatable {
+    static func == (lhs: Match, rhs: Match) -> Bool {
+        lhs.id == rhs.id
+    }
+    
 }

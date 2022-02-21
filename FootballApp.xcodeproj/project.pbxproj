@@ -19,13 +19,18 @@
 		D08FE92927C3B1A4002D7EC0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92827C3B1A4002D7EC0 /* Roboto-Regular.ttf */; };
 		D08FE92B27C3B1AE002D7EC0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92A27C3B1AE002D7EC0 /* Roboto-Bold.ttf */; };
 		D08FE92E27C3C177002D7EC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */; };
+		D08FE93027C3D459002D7EC0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92F27C3D458002D7EC0 /* UIViewController+Extension.swift */; };
+		D08FE93227C3D99A002D7EC0 /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE93127C3D99A002D7EC0 /* FeedViewModelTests.swift */; };
+		D08FE93327C3E0B3002D7EC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91727C38917002D7EC0 /* Observable.swift */; };
+		D08FE93527C3E379002D7EC0 /* FeedRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE93427C3E379002D7EC0 /* FeedRepositoryTests.swift */; };
+		D08FE93627C3E5EC002D7EC0 /* ApiRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59C27C2D82600724195 /* ApiRestClient.swift */; };
+		D08FE93727C3FC63002D7EC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */; };
 		D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56327C2D46800724195 /* AppDelegate.swift */; };
 		D0ACD56627C2D46800724195 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56527C2D46800724195 /* SceneDelegate.swift */; };
-		D0ACD56827C2D46800724195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56727C2D46800724195 /* ViewController.swift */; };
+		D0ACD56827C2D46800724195 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56727C2D46800724195 /* MainViewController.swift */; };
 		D0ACD56B27C2D46800724195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ACD56927C2D46800724195 /* Main.storyboard */; };
 		D0ACD56D27C2D46900724195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ACD56C27C2D46900724195 /* Assets.xcassets */; };
 		D0ACD57027C2D46900724195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ACD56E27C2D46900724195 /* LaunchScreen.storyboard */; };
-		D0ACD57B27C2D46900724195 /* FootballAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD57A27C2D46900724195 /* FootballAppTests.swift */; };
 		D0ACD58527C2D46900724195 /* FootballAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD58427C2D46900724195 /* FootballAppUITests.swift */; };
 		D0ACD58727C2D46900724195 /* FootballAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */; };
 		D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD59727C2D66200724195 /* FeedViewController.swift */; };
@@ -67,16 +72,18 @@
 		D08FE92827C3B1A4002D7EC0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		D08FE92A27C3B1AE002D7EC0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		D08FE92F27C3D458002D7EC0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D08FE93127C3D99A002D7EC0 /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
+		D08FE93427C3E379002D7EC0 /* FeedRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepositoryTests.swift; sourceTree = "<group>"; };
 		D0ACD56027C2D46800724195 /* FootballApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACD56327C2D46800724195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0ACD56527C2D46800724195 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0ACD56727C2D46800724195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0ACD56727C2D46800724195 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0ACD56A27C2D46800724195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0ACD56C27C2D46900724195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0ACD56F27C2D46900724195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0ACD57127C2D46900724195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0ACD57627C2D46900724195 /* FootballAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0ACD57A27C2D46900724195 /* FootballAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppTests.swift; sourceTree = "<group>"; };
 		D0ACD58027C2D46900724195 /* FootballAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACD58427C2D46900724195 /* FootballAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppUITests.swift; sourceTree = "<group>"; };
 		D0ACD58627C2D46900724195 /* FootballAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */,
+				D08FE92F27C3D458002D7EC0 /* UIViewController+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,7 +195,8 @@
 		D0ACD57927C2D46900724195 /* FootballAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0ACD57A27C2D46900724195 /* FootballAppTests.swift */,
+				D08FE93127C3D99A002D7EC0 /* FeedViewModelTests.swift */,
+				D08FE93427C3E379002D7EC0 /* FeedRepositoryTests.swift */,
 			);
 			path = FootballAppTests;
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 		D0ACD59327C2D5ED00724195 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0ACD56E27C2D46900724195 /* LaunchScreen.storyboard */,
 				D08FE92627C3B18A002D7EC0 /* Fonts */,
 				D0ACD56C27C2D46900724195 /* Assets.xcassets */,
 				D0ACD57127C2D46900724195 /* Info.plist */,
@@ -215,20 +225,19 @@
 		D0ACD59427C2D5FE00724195 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D0ACD59527C2D60C00724195 /* Initial */,
+				D0ACD59527C2D60C00724195 /* Main */,
 				D0ACD59627C2D64500724195 /* Feed */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		D0ACD59527C2D60C00724195 /* Initial */ = {
+		D0ACD59527C2D60C00724195 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D0ACD56E27C2D46900724195 /* LaunchScreen.storyboard */,
 				D0ACD56927C2D46800724195 /* Main.storyboard */,
-				D0ACD56727C2D46800724195 /* ViewController.swift */,
+				D0ACD56727C2D46800724195 /* MainViewController.swift */,
 			);
-			path = Initial;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		D0ACD59627C2D64500724195 /* Feed */ = {
@@ -412,9 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ACD56827C2D46800724195 /* ViewController.swift in Sources */,
+				D0ACD56827C2D46800724195 /* MainViewController.swift in Sources */,
 				D0ACD5B227C2E5C300724195 /* Feed.swift in Sources */,
 				D0ACD59D27C2D82600724195 /* ApiRestClient.swift in Sources */,
+				D08FE93027C3D459002D7EC0 /* UIViewController+Extension.swift in Sources */,
 				D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */,
 				D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */,
 				D08FE91A27C38984002D7EC0 /* FeedViewModel.swift in Sources */,
@@ -434,11 +444,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ACD5A627C2E27D00724195 /* FeedRepository.swift in Sources */,
+				D08FE93627C3E5EC002D7EC0 /* ApiRestClient.swift in Sources */,
+				D08FE93227C3D99A002D7EC0 /* FeedViewModelTests.swift in Sources */,
 				D0ACD5B327C2E5C300724195 /* Feed.swift in Sources */,
 				D08FE91F27C39441002D7EC0 /* Resources.swift in Sources */,
+				D08FE93727C3FC63002D7EC0 /* Date+Extensions.swift in Sources */,
+				D08FE93527C3E379002D7EC0 /* FeedRepositoryTests.swift in Sources */,
 				D08FE91B27C38984002D7EC0 /* FeedViewModel.swift in Sources */,
 				D0ACD5A927C2E30E00724195 /* FeedRequests.swift in Sources */,
-				D0ACD57B27C2D46900724195 /* FootballAppTests.swift in Sources */,
+				D08FE93327C3E0B3002D7EC0 /* Observable.swift in Sources */,
 				D08FE92327C39BA3002D7EC0 /* MatchViewCell.swift in Sources */,
 				D0ACD5A127C2D8AA00724195 /* ApiParameters.swift in Sources */,
 			);

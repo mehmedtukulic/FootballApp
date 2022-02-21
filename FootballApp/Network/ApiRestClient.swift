@@ -7,38 +7,38 @@
 
 import Foundation
 
-protocol FootballAPIProtocol {
-    func submitRequest<R:Decodable>(footballRequest: FootballRequest, success: @escaping (R) -> Void, failure: @escaping (String) -> ())
+protocol APIProtocol {
+    func makeRequest<R:Decodable>(_ request: APIRequest, success: @escaping (R) -> Void, failure: @escaping (String) -> ())
 }
 
-class APIClient: FootballAPIProtocol {
-    func submitRequest<R>(footballRequest: FootballRequest, success: @escaping (R) -> Void, failure: @escaping (String) -> ()) where R : Decodable {
+class APIClient: APIProtocol {
+    func makeRequest<R>(_ request: APIRequest, success: @escaping (R) -> Void, failure: @escaping (String) -> ()) where R : Decodable {
         // create url
-        guard let url = URL(string: footballRequest.url) else { return }
+        guard let url = URL(string: request.url) else { return }
         
         // create request
-        var request = URLRequest(url: url)
+        var urlRequest = URLRequest(url: url)
         
         // add body parameters
-        if let parameters = footballRequest.parameters {
+        if let parameters = request.parameters {
             do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
             } catch {
                 failure("Body not decodable")
             }
         } else {
-            request.httpBody = nil
+            urlRequest.httpBody = nil
         }
         
         // set headers
-        request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-        request.allHTTPHeaderFields = footballRequest.headers as? [String: String]
+        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        urlRequest.allHTTPHeaderFields = request.headers as? [String: String]
         
         // set method
-        request.httpMethod = footballRequest.method.rawValue
+        urlRequest.httpMethod = request.method.rawValue
         let session = URLSession(configuration: .default)
       
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: urlRequest) { data, response, error in
             guard let data = data else {
                 DispatchQueue.main.async {
                     failure("no data")

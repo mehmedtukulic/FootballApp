@@ -22,9 +22,12 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         bindViewModel()
-        setNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setDefaultNavigationBar(with: "Fixtures list")
     }
     
     private func bindViewModel(){
@@ -34,17 +37,12 @@ class FeedViewController: UIViewController {
             self?.tableView.reloadData()
         }
     }
-    
-    private func setNavigationBar(){
-        title = "Fixture list"
-        navigationController?.navigationBar.backgroundColor = .white
-    }
 }
 
 // MARK: - TableView Delegates
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.feedMatches.value.count
+         viewModel.feedMatches.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

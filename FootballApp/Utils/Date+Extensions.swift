@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DateFormatter {
+public extension DateFormatter {
     static let iso8601Formater: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
@@ -27,7 +27,7 @@ extension DateFormatter {
     }()
 }
 
-extension Date {
+public extension Date {
     func toString() -> String {
         let string = DateFormatter.dayMonthYear.string(from: self)
         return string
