@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FeedRepositoryProtocol {
-    func getFeed(success: @escaping (Feed) -> Void, failure: @escaping (String)  -> Void)
+    func getFeed(success: @escaping (FeedResponse) -> Void, failure: @escaping (String)  -> Void)
 }
 
 class FeedRepository: FeedRepositoryProtocol {
@@ -18,9 +18,9 @@ class FeedRepository: FeedRepositoryProtocol {
         self.apiClient = apiClient
     }
     
-    func getFeed(success: @escaping (Feed) -> Void, failure: @escaping (String) -> Void) {
+    func getFeed(success: @escaping (FeedResponse) -> Void, failure: @escaping (String) -> Void) {
         let request = FeedRequest.getFeed
-        apiClient.submitRequest(footballRequest: request) { (response: Feed) in
+        apiClient.submitRequest(footballRequest: request) { (response: FeedResponse) in
             success(response)
         } failure: { error in
             failure(error)

@@ -8,22 +8,54 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    private let feedRepository = FeedRepository()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = .red
-        getFeed()
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            let xib = UINib(nibName: "MatchViewCell", bundle: nil)
+            tableView.register(xib, forCellReuseIdentifier: "MatchViewCell")
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.backgroundColor = Colors.homebackgroundGray
+        }
     }
     
-    private func getFeed(){
-        feedRepository.getFeed { [weak self] feed in
-            print("aaa")
-        } failure: { [weak self] error in
-            print(error)
+    let viewModel = FeedViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        bindViewModel()
+        setNavigationBar()
+    }
+    
+    private func bindViewModel(){
+        viewModel.getFeed()
+    
+        viewModel.feedMatches.bind { [weak self] matches in
+            self?.tableView.reloadData()
         }
+    }
+    
+    private func setNavigationBar(){
+        title = "Fixture list"
+        navigationController?.navigationBar.backgroundColor = .white
+    }
+}
 
+// MARK: - TableView Delegates
+extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.feedMatches.value.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MatchViewCell", for: indexPath) as! MatchViewCell
+        let match = viewModel.feedMatches.value[indexPath.row]
+        cell.configure(match: match)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 231
     }
     
 }

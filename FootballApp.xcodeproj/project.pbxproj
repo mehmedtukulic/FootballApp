@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D08FE91827C38917002D7EC0 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91727C38917002D7EC0 /* Observable.swift */; };
+		D08FE91A27C38984002D7EC0 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91927C38984002D7EC0 /* FeedViewModel.swift */; };
+		D08FE91B27C38984002D7EC0 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91927C38984002D7EC0 /* FeedViewModel.swift */; };
+		D08FE91E27C39441002D7EC0 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91D27C39441002D7EC0 /* Resources.swift */; };
+		D08FE91F27C39441002D7EC0 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE91D27C39441002D7EC0 /* Resources.swift */; };
+		D08FE92227C39BA3002D7EC0 /* MatchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92027C39BA3002D7EC0 /* MatchViewCell.swift */; };
+		D08FE92327C39BA3002D7EC0 /* MatchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92027C39BA3002D7EC0 /* MatchViewCell.swift */; };
+		D08FE92427C39BA3002D7EC0 /* MatchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92127C39BA3002D7EC0 /* MatchViewCell.xib */; };
+		D08FE92527C39BA3002D7EC0 /* MatchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92127C39BA3002D7EC0 /* MatchViewCell.xib */; };
+		D08FE92927C3B1A4002D7EC0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92827C3B1A4002D7EC0 /* Roboto-Regular.ttf */; };
+		D08FE92B27C3B1AE002D7EC0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D08FE92A27C3B1AE002D7EC0 /* Roboto-Bold.ttf */; };
+		D08FE92E27C3C177002D7EC0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */; };
 		D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56327C2D46800724195 /* AppDelegate.swift */; };
 		D0ACD56627C2D46800724195 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56527C2D46800724195 /* SceneDelegate.swift */; };
 		D0ACD56827C2D46800724195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD56727C2D46800724195 /* ViewController.swift */; };
@@ -47,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D08FE91727C38917002D7EC0 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D08FE91927C38984002D7EC0 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D08FE91D27C39441002D7EC0 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D08FE92027C39BA3002D7EC0 /* MatchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewCell.swift; sourceTree = "<group>"; };
+		D08FE92127C39BA3002D7EC0 /* MatchViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchViewCell.xib; sourceTree = "<group>"; };
+		D08FE92827C3B1A4002D7EC0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D08FE92A27C3B1AE002D7EC0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		D0ACD56027C2D46800724195 /* FootballApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ACD56327C2D46800724195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0ACD56527C2D46800724195 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +114,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D08FE91C27C38989002D7EC0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D08FE92027C39BA3002D7EC0 /* MatchViewCell.swift */,
+				D08FE92127C39BA3002D7EC0 /* MatchViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D08FE92627C3B18A002D7EC0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D08FE92727C3B192002D7EC0 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D08FE92727C3B192002D7EC0 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				D08FE92827C3B1A4002D7EC0 /* Roboto-Regular.ttf */,
+				D08FE92A27C3B1AE002D7EC0 /* Roboto-Bold.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		D08FE92C27C3C12E002D7EC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D08FE92D27C3C177002D7EC0 /* Date+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D0ACD55727C2D46800724195 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +171,7 @@
 		D0ACD56227C2D46800724195 /* FootballApp */ = {
 			isa = PBXGroup;
 			children = (
+				D08FE92C27C3C12E002D7EC0 /* Utils */,
 				D0ACD59B27C2D7FE00724195 /* Network */,
 				D0ACD5AA27C2E53500724195 /* Models */,
 				D0ACD5A227C2E0E600724195 /* Repositories */,
@@ -124,6 +179,7 @@
 				D0ACD59327C2D5ED00724195 /* Resources */,
 				D0ACD56327C2D46800724195 /* AppDelegate.swift */,
 				D0ACD56527C2D46800724195 /* SceneDelegate.swift */,
+				D08FE91727C38917002D7EC0 /* Observable.swift */,
 			);
 			path = FootballApp;
 			sourceTree = "<group>";
@@ -148,8 +204,10 @@
 		D0ACD59327C2D5ED00724195 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D08FE92627C3B18A002D7EC0 /* Fonts */,
 				D0ACD56C27C2D46900724195 /* Assets.xcassets */,
 				D0ACD57127C2D46900724195 /* Info.plist */,
+				D08FE91D27C39441002D7EC0 /* Resources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,8 +234,10 @@
 		D0ACD59627C2D64500724195 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				D08FE91C27C38989002D7EC0 /* Cells */,
 				D0ACD59727C2D66200724195 /* FeedViewController.swift */,
 				D0ACD59827C2D66200724195 /* FeedViewController.xib */,
+				D08FE91927C38984002D7EC0 /* FeedViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -320,7 +380,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08FE92B27C3B1AE002D7EC0 /* Roboto-Bold.ttf in Resources */,
+				D08FE92927C3B1A4002D7EC0 /* Roboto-Regular.ttf in Resources */,
 				D0ACD57027C2D46900724195 /* LaunchScreen.storyboard in Resources */,
+				D08FE92427C39BA3002D7EC0 /* MatchViewCell.xib in Resources */,
 				D0ACD56D27C2D46900724195 /* Assets.xcassets in Resources */,
 				D0ACD59A27C2D66200724195 /* FeedViewController.xib in Resources */,
 				D0ACD56B27C2D46800724195 /* Main.storyboard in Resources */,
@@ -331,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08FE92527C39BA3002D7EC0 /* MatchViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +417,14 @@
 				D0ACD59D27C2D82600724195 /* ApiRestClient.swift in Sources */,
 				D0ACD56427C2D46800724195 /* AppDelegate.swift in Sources */,
 				D0ACD59927C2D66200724195 /* FeedViewController.swift in Sources */,
+				D08FE91A27C38984002D7EC0 /* FeedViewModel.swift in Sources */,
 				D0ACD5A027C2D8AA00724195 /* ApiParameters.swift in Sources */,
+				D08FE91827C38917002D7EC0 /* Observable.swift in Sources */,
 				D0ACD5A827C2E30E00724195 /* FeedRequests.swift in Sources */,
+				D08FE92E27C3C177002D7EC0 /* Date+Extensions.swift in Sources */,
+				D08FE91E27C39441002D7EC0 /* Resources.swift in Sources */,
 				D0ACD5A527C2E27D00724195 /* FeedRepository.swift in Sources */,
+				D08FE92227C39BA3002D7EC0 /* MatchViewCell.swift in Sources */,
 				D0ACD56627C2D46800724195 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,8 +435,11 @@
 			files = (
 				D0ACD5A627C2E27D00724195 /* FeedRepository.swift in Sources */,
 				D0ACD5B327C2E5C300724195 /* Feed.swift in Sources */,
+				D08FE91F27C39441002D7EC0 /* Resources.swift in Sources */,
+				D08FE91B27C38984002D7EC0 /* FeedViewModel.swift in Sources */,
 				D0ACD5A927C2E30E00724195 /* FeedRequests.swift in Sources */,
 				D0ACD57B27C2D46900724195 /* FootballAppTests.swift in Sources */,
+				D08FE92327C39BA3002D7EC0 /* MatchViewCell.swift in Sources */,
 				D0ACD5A127C2D8AA00724195 /* ApiParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
